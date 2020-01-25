@@ -54,11 +54,30 @@
             <!-- O nav é um conteinei de um menu de navegação -->
             <nav>
                 <h1>Menu Principal</h1>
-                - Home
-                - Especificações
-                - Fotos
-                - Multimídia
-                - Fale conosco
+                <!-- A lista ordenada tem vários tipo, a(ordem alfabética), 1(ordem numérica) e i(Algarismos romanos). Existe o parametro start que ao se passar um valor inteiro, ele inicia a lista a partir desse valor. 
+                <ol type="I" start="1">
+                    <li>Home</li>
+                    <li>Especificações</li>
+                    <li>Fotos</li>
+                    <li>Multimídia</li>
+                    <li>Fale conosco</li>
+                </ol>-->
+
+                <!-- As listas não ordenadas não possuem start e podem ser do tipo disc, square e circle -->
+                <ul type="disc">
+                    <li>Home</li>
+                    <li>Especificações</li>
+                    <li>Fotos</li>
+                    <li>Multimídia</li>
+                    <!-- lista dentro de um elementro d outra listas -->
+                        <ul type="square">
+                            <li>Vídeos</li>
+                            <li>Músicas</li>
+                        </ul>
+                    <li>Fale conosco</li>
+                </ul>
+
+
             </nav>
 
         </header>
