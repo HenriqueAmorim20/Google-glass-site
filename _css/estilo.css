@@ -1,10 +1,22 @@
-@charset"UTF-8"; 
+@charset "UTF-8"; 
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 20px;
+}
 
 body {
 	background-color:#EBEBEB;
 	color:#000;
 }
 p {
+    font-size: 20px;
 	text-align:justify;
 	text-indent:50px;
 }
@@ -12,9 +24,13 @@ p {
 /* Formatação de imagens com legendas */
 
 figure.foto-legenda{
-	position: relative;
-	border: 8px solid white;
-	box-shadow: 1px 1px 4px black;
+    /* A posição relativa faz com que tudo relacionado a imagem seja feito posicionalmente a partir do local onde ela está */
+    position: relative;
+    /* Cria uma borda para a imagem */
+    border: 8px solid white;
+    /* Cria um sombra para a borda da imagem */
+    box-shadow: 1px 1px 4px black;
+     
 	display: inline-block;
 }
 
@@ -24,18 +40,26 @@ figure.foto-legenda img{
 }
 
 figure.foto-legenda figcaption{
-	opacity: 0;
+    /* Esconde temporariamente a legenda para que não atrapalhe a visualização da imagem */
+    opacity: 0;
+    /* A posição absoluta e o top 0 faz com que a legenda sempre fique em uma posição determinada na imagem */
 	position: absolute;
-	top: 0px;
+    top: 0px;
+    /* Cria um bloco com transparencia que preenche toda a linha da imagem */
 	background-color:rgba(0,0,0,.4); 
 	color: white;
 	width: 100%;
-	height: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	transition: 1s;
+    height: 100%;
+    /* Cria um espaço dentro da legenda */
+    padding: 10px;
+    /* Cria um box dentro da borda para que não sejam ultrapassados os limites da borda */
+    box-sizing: border-box;
+    /* Cria um efeito de transição de acordo com a opacidade definida anteriormente para o background também definido */
+	transition: opacity 3s;
 }
 
+
+/* O hover dispara uma classe especifica para quando se passar o mouse em cima da imagem ele mostra a legenda */
 figure.foto-legenda:hover figcaption{
 	opacity: 1;
 	position: absolute;
