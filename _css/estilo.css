@@ -1,66 +1,109 @@
-@charset "UTF-8"; 
-
-h1{
+@charset "UTF-8";
+h1 {
     font-size: 40px;
 }
 
-h2{
+h2 {
     font-size: 25px;
 }
-h3{
+
+h3 {
     font-size: 20px;
 }
 
 body {
-	background-color:#EBEBEB;
-	color:#000;
+    background-color: #EBEBEB;
+    color: #000;
 }
+
 p {
     font-size: 20px;
-	text-align:justify;
-	text-indent:50px;
+    text-align: justify;
+    text-indent: 50px;
 }
-		
+
+
 /* Formatação de imagens com legendas */
 
-figure.foto-legenda{
+figure.foto-legenda {
     /* A posição relativa faz com que tudo relacionado a imagem seja feito posicionalmente a partir do local onde ela está */
     position: relative;
     /* Cria uma borda para a imagem */
     border: 8px solid white;
     /* Cria um sombra para a borda da imagem */
     box-shadow: 1px 1px 4px black;
-     
-	display: inline-block;
+    display: inline-block;
 }
 
-figure.foto-legenda img{
-	width: auto;
-	height: auto;
+figure.foto-legenda img {
+    width: auto;
+    height: auto;
 }
 
-figure.foto-legenda figcaption{
+figure.foto-legenda figcaption {
     /* Esconde temporariamente a legenda para que não atrapalhe a visualização da imagem */
     opacity: 0;
     /* A posição absoluta e o top 0 faz com que a legenda sempre fique em uma posição determinada na imagem */
-	position: absolute;
+    position: absolute;
     top: 0px;
     /* Cria um bloco com transparencia que preenche toda a linha da imagem */
-	background-color:rgba(0,0,0,.4); 
-	color: white;
-	width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    width: 100%;
     height: 100%;
     /* Cria um espaço dentro da legenda */
     padding: 10px;
     /* Cria um box dentro da borda para que não sejam ultrapassados os limites da borda */
     box-sizing: border-box;
     /* Cria um efeito de transição de acordo com a opacidade definida anteriormente para o background também definido */
-	transition: opacity 3s;
+    transition: opacity 3s;
 }
 
 
 /* O hover dispara uma classe especifica para quando se passar o mouse em cima da imagem ele mostra a legenda */
-figure.foto-legenda:hover figcaption{
-	opacity: 1;
-	position: absolute;
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+    position: absolute;
+}
+
+
+/* Formatação do menu */
+
+nav#menu {
+    display: block;
+}
+
+
+/* Utiliza-se # para se referenciar a um id, ul se refere a lista nao ordenada que seŕa formatada */
+
+nav#menu ul {
+    /* Retira os símbolos dos elementos da lista */
+    list-style-type: none;
+    /* Transforma o texto da lista em letras maiusculas */
+    text-transform: uppercase;
+    /* Faz com que a lista não fique presa dentro do conteiner e sim possa ser utilizada em todo o site */
+    position: absolute;
+    top: -20px;
+    left: 1200px;
+}
+
+
+/* Formatação dos itens da lista do id menu */
+
+nav#menu li {
+    /* Organiza os itens da lista de forma horizontal */
+    display: inline-block;
+    background-color: #dddddd;
+    /* Dá um espaçamento dentro do menu */
+    padding: 10px;
+    /* Da um espaço entre os itens do menu */
+    margin: 2px;
+}
+
+
+/* Serve para esconder o h1 pois ele não possui significado visual, apenas semantico dentro do html*/
+
+nav#menu h1 {
+    display: none;
 }
