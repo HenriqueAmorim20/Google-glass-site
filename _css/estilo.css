@@ -182,3 +182,39 @@ nav#menu a {
 nav#menu a:hover {
     color: #a39b9b;
 }
+
+
+/* Configura a seção principal para ser mostrada como um bloco flutuante à esquerda com 1000px de largura */
+
+section#corpo {
+    display: block;
+    width: 950px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+
+/* Configura a seção lateral para ser mostrada como um bloco à direita com 700pc de largura */
+
+aside#lateral {
+    display: block;
+    width: 700px;
+    float: right;
+}
+
+
+/* Configura o rodapé para limpar as 2 divisões footer#rodape { */
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+footer#rodape a {
+    text-decoration: none;
+}
