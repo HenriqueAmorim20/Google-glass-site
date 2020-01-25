@@ -1,16 +1,16 @@
 @charset "UTF-8";
-h1 {
-    font-size: 40px;
+
+/* Essa é a maneira de adicionar uma fonte personalizada que está localizada em um arquivo local do seu computador */
+
+@font-face {
+    font-family: 'Fontlogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 
-h2 {
-    font-size: 25px;
-}
 
-h3 {
-    font-size: 20px;
-}
+/* Outra maneira de adicionar fontes é atraves de um repositorio, que nesse caso é o google */
 
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 body {
     background-color: #dddddd;
     color: #000;
@@ -42,7 +42,36 @@ header#cabecalho img#icone {
     top: 70px;
 }
 
-header#cabecalho {}
+
+/* Parte resposável pela formatação de todos os h1 do cabeçalho */
+
+header#cabecalho h1 {
+    font-family: Fontlogo;
+    font-size: 50px;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    margin-bottom: 0;
+}
+
+header#cabecalho h2 {
+    /* Referencia a fonte importada do repositorio da google */
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    color: #888888;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    margin-top: 0;
+}
+
+
+/* Essa parte mexe com todas as configurações referentes ao cabeçalho em geral */
+
+header#cabecalho {
+    /* Cria uma borda inferior ao cabeçalho com a cor cinza no formato solido(continuo) */
+    border-bottom: 1px #606060 solid;
+    height: 170px;
+    /* Essa é outra maneira de inserir uma imagem utilizando ela como se fosse um background. O primeiro parâmetro é a referencia, o segundo é pra não repetir, e os outros são referentes ao posicionamento do background em relação ao container que ele está inserido */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+}
 
 
 /* Formatação de imagens com legendas */
@@ -151,5 +180,5 @@ nav#menu a {
 /* Muda a cor do link quando passar o mouse em cima(função hover) */
 
 nav#menu a:hover {
-    color: #ffffff;
+    color: #a39b9b;
 }
