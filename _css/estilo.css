@@ -12,8 +12,19 @@ h3 {
 }
 
 body {
-    background-color: #EBEBEB;
+    background-color: #dddddd;
     color: #000;
+}
+
+
+/* Essa parte altera toda a parte que está dentro de uma divisão previamente estabelecida(<div>), delimitando os limites e centralizando */
+
+div#interface {
+    width: 1750px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
 }
 
 p {
@@ -21,6 +32,17 @@ p {
     text-align: justify;
     text-indent: 50px;
 }
+
+
+/* Essa parte altera a imagem que tem o id icone que está dentro do header que tem ide cabecalho */
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1590px;
+    top: 70px;
+}
+
+header#cabecalho {}
 
 
 /* Formatação de imagens com legendas */
@@ -71,6 +93,7 @@ figure.foto-legenda:hover figcaption {
 /* Formatação do menu */
 
 nav#menu {
+    font-size: 19px;
     display: block;
 }
 
@@ -85,7 +108,7 @@ nav#menu ul {
     /* Faz com que a lista não fique presa dentro do conteiner e sim possa ser utilizada em todo o site */
     position: absolute;
     top: -20px;
-    left: 1200px;
+    left: 1100px;
 }
 
 
@@ -98,7 +121,15 @@ nav#menu li {
     /* Dá um espaçamento dentro do menu */
     padding: 10px;
     /* Da um espaço entre os itens do menu */
-    margin: 2px;
+    margin: .5px;
+    transition: background-color 1s;
+}
+
+
+/* Mudança de background quando passar o mouse(função hover) */
+
+nav#menu li:hover {
+    background-color: #606060;
 }
 
 
@@ -106,4 +137,19 @@ nav#menu li {
 
 nav#menu h1 {
     display: none;
+}
+
+
+/* Retira o sublinhado e muda as cores dos links, o "a" é de âncora(link) */
+
+nav#menu a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Muda a cor do link quando passar o mouse em cima(função hover) */
+
+nav#menu a:hover {
+    color: #ffffff;
 }
