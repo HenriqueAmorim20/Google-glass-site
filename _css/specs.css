@@ -1,0 +1,16 @@
+@charset "UTF-8";
+section#conteudo {
+    width: 1200px;
+    height: 500px;
+    margin-top: 70pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0pt;
+}
+
+iframe#frame-spec {
+    display: block;
+    float: right;
+    width: 490px;
+    height: 410px;
+}

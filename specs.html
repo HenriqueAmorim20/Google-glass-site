@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Tudo sobre o google glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/specs.css">
 </head>
 <script src="_javascript/funcoes.js"></script>
 
@@ -26,9 +27,36 @@
                     <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
                 </ul>
             </nav>
+            <section>
         </header>
-        Google Glass A revolução do Google está chegando [AQUI ENTRA UMA FOTO] Menu Principal - Home - Especificações - Fotos - Multimídia - Fale conosco Glass > Especificações Raio-X no Google Glass por Gustavo Guanabara Atualizado em 01/Maio/2013 Clique em
-        qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações. [AQUI ENTRA UMA IMAGEM]
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Glass > Especificações</h3>
+                    <h1>Raio-X no Google Glass</h1>
+                    <h2>por Henrique Amorim</h2>
+                    <h3 class="direita">Atualizado em 26/Janeiro/2020</h3>
+                </hgroup>
+            </header>
+            <p>
+                Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+            </p>
+            <section id="conteudo">
+                <!-- Essa parte declara a imgaem e também passa como parametro um mapa de imagem que será utilizado para criar as areas vermelhas clicaveis. -->
+                <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa" alt="">
+                <!-- Todo mapa deve ter um nome para ser referenciado com # no usemap -->
+                <map name="meumapa">
+                    <!-- Essa parte cria uma area retangular com as coordenadas seguintes(obtidas no photoshop), passa uma referencia de qual arquivo abrir(junto com o id da parte desejada nesse caso) e também indica o alvo(onde) vai abrir esse arquivo, que no caso é o iframe. -->
+                    <area shape="rect" coords="184,210,272,255" href="google-glass.html#tela" target="janela">
+                    <area shape="circle" coords="158,244,10" href="google-glass.html#camera" target="janela">
+                    <area shape="circle" coords="77,52,10" href="google-glass.html#gadgets" target="janela">
+                    <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela">
+                </map>
+                <!-- Um iframe basicamente pega outro arquivo e faz um frame na pagina com aquele conteudo. no scrolling está sendo utilizado para que o scroll seja realizado pelo site e não pelo usuario, já que está sendo utilizada a tecnica de espaçamento das informações no outro arquivo. -->
+                <iframe src="google-glass.html" scrolling="no" name="janela" id="frame-spec" frameborder="0"></iframe>
+            </section>
+        </article>
+        </section>
         <footer id="rodape">
             <p>Copyright &copy; 2020 - by Henrique Amorim
                 <br> <a href="https://www.facebook.com/" target="_blank">Facebook</a> | <a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
