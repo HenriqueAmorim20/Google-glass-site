@@ -184,7 +184,7 @@ nav#menu a:hover {
 }
 
 
-/* Configura a seção principal para ser mostrada como um bloco flutuante à esquerda com 1000px de largura */
+/* Configura a seção principal para ser mostrada como um bloco flutuante à esquerda com espaço interno à direita da borda de 20pc e com 1000px de largura */
 
 section#corpo {
     display: block;
@@ -192,6 +192,65 @@ section#corpo {
     float: left;
     border-right: 1px solid #606060;
     padding-right: 20px;
+}
+
+
+/* Formata a tabela e seus elementos */
+
+table#tabelaspec {
+    /* cria a borda da tabela */
+    border: 1px solid #606060;
+    /* Tira o espaço entre a outra borda que é criada para cada elemento abaixo */
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Formata cada celula da tabela criando uma borda individual e um espaço de 10px para cada um */
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+
+/* Formata as celulas da classe da esquerda da tabela */
+
+table#tabelaspec td.esquerda {
+    text-align: center;
+    color: #ffffff;
+    background-color: #606060;
+    font-weight: bold;
+}
+
+
+/* Formata as celulas da classe da direita da tabela */
+
+table#tabelaspec td.direita {
+    text-align: left;
+    background-color: #cecece;
+    color: #000;
+}
+
+
+/* Formata o título da tabela */
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+/* Formata um grupo de palavras determinadas(span) no arquivo index e cria um bloco flutuante a direita do título para melhor formatação */
+
+table#tabelaspec caption span {
+    color: #000;
+    font-size: 12px;
+    display: block;
+    float: right;
+    margin-top: 10px;
 }
 
 
@@ -204,16 +263,22 @@ aside#lateral {
 }
 
 
-/* Configura o rodapé para limpar as 2 divisões footer#rodape { */
+/* Configura o rodapé para limpar as 2 divisões criadas anteriormente e também criar uma borda de divisão */
 
 footer#rodape {
     clear: both;
     border-top: 1px solid #606060;
 }
 
+
+/* Alinha todos os paragrafos dentro do rodape ao centro */
+
 footer#rodape p {
     text-align: center;
 }
+
+
+/* Retira a decoração do texto dos links */
 
 footer#rodape a {
     text-decoration: none;
