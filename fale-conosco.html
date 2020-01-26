@@ -5,8 +5,18 @@
     <meta charset="UTF-8">
     <title>Tudo sobre o google glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
 </head>
 <script src="_javascript/funcoes.js"></script>
+<script>
+    function calcular_total() {
+        var qtd = parseInt(document.getElementById("iQtd").value)
+        var tot = qtd * 1500;
+        document.getElementById("iPreco").value = tot;
+
+
+    }
+</script>
 
 <body>
     <div id="interface">
@@ -27,9 +37,109 @@
                 </ul>
             </nav>
         </header>
-        Google Glass A revolução do Google está chegando [AQUI ENTRA UMA FOTO] Menu Principal - Home - Especificações - Fotos - Multimídia - Fale conosco Fale Conosco > Contato Formulário de Contato por Gustavo Guanabara Atualizado em 01/Maio/2013 Identificação
-        do Usuário Nome: Senha: E-mail: Sexo: - Masculino - Feminino Data de Nascimento: Endereço do Usuário Logradouro: Número: Estado: Cidade: Mensagem do Usuário Grau de Urgência: Mensagem: Quero um Google Glass Gostaria de adquirir um Google Glass
-        quando disponível Cor: Quantidade: Preço Total: R$ [BOTÃO ENVIAR]
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Henrique Amorim</h2>
+                    <h3 class="direita">Atualizado em 24/Janeiro/2020</h3>
+                </hgroup>
+            </header>
+        </article>
+
+        <!-- dois tipos de metodo -->
+        <form method="POST" id="fcontato" action="mailto:hacmelo@gmail.com" oninput="calcular_total();">
+            <fieldset id="usuario">
+                <legend>
+                    Identificação do Usuário
+                </legend>
+                <p>
+                    <label for="iNome">Nome:</label>&nbsp; <input type="text" name="nNome" id="iNome" size="20" maxlength="30" placeholder="João da silva Costa">
+                </p>
+                <p>
+                    <label for="iSenha">Senha:</label> <input type="password" name="nSenha" id="iSenha" size="20" maxlength="30" placeholder="******">
+                </p>
+                <p>
+                    <label for="iEmail">E-mail:</label> <input type="email" name="nEmail" id="iEmail" size="20" maxlength="30" placeholder="fulano@gmail.com">
+                </p>
+                <fieldset id="sexo">
+                    <legend>
+                        Sexo:
+                    </legend>
+                    <input type="radio" name="nSexo" id="iMasc"> <label for="iMasc">Masculino</label><br>
+                    <input type="radio" name="nSexo" id="iFem"> <label for="iFem">Feminino</label>
+                </fieldset>
+                <p>
+                    <label for="iData">Data de Nascimento:</label> <input type="date" name="nData" id="iData">
+                </p>
+            </fieldset>
+            <fieldset id="endereco">
+                <legend>
+                    Endereço do Usuário
+                </legend>
+                <p>
+                    <label for="iEndereco">Logradouro:</label> <input type="text" name="nEndereco" id="iEndereco" maxlength="80" size="20" placeholder="Ex.: 3 Av Rua 2 Bloco A/B ...">
+                </p>
+                <p>
+                    <label for="iNumero">Número:</label> <input type="number" name="nNumero" id="iNumero" min="0" max="9999" placeholder="Ex.: 214">
+                </p>
+                <p>
+                    <label for="iEstado">Estado:</label> <select name="nEstado" id="iEstado">
+                        <optgroup label="Região Centro-Oeste">
+                            <option value="DF">DF</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option value="SP">São paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="iCidade">Cidade:</label> <input type="text" name="nCidade" id="iCidade" maxlength="40" size="20" placeholder="Ex.: Brasília" list="cidades">
+                    <datalist id="cidades">
+                        <option value="Núcleo Bandeirante"></option>
+                        <option value="Sudoeste"></option>
+                        <option value="Park Way"></option>
+                        <option value="Asa Norte"></option>
+                        <option value="Asa Norte"></option>
+                        <option value="Noroeste"></option>
+                        <option value="Planaltina"></option>
+                        <option value="Sobradinho"></option>
+                    </datalist>
+                </p>
+            </fieldset>
+            <fieldset id="mensagem">
+                <legend>
+                    Mensagem do Usuário
+                </legend>
+                <p>
+                    <label for="iGU">Grau de Urgência:</label> Mín.<input type="range" name="nGU" id="iGU" min="0" max="10" step="2">Máx.
+                </p>
+                <p>
+                    Mensagem: <textarea name="nMsg" id="iMsg" cols="25" rows="5"></textarea>
+                </p>
+            </fieldset>
+            <fieldset id="pedido">
+                <legend>
+                    Quero um Google Glass
+                </legend>
+                <p> <input type="checkbox" name="nPed" id="iPed"> <label for="iPed">Tenho a intenção de adquirir um Google Glass quando disponível</label>
+                </p>
+                <p>
+                    <label for="iCor">Cor:</label> <input type="color" name="nCor" id="icor">
+                </p>
+                <p>
+                    <label for="iQtd">Quantidade:</label> <input type="number" name="nQtd" id="iQtd" min="0" max="5" value="0">
+                </p>
+                <p>
+                    <label for="iPreco">Preço Total: R$</label> <input type="text" name="nPreco" id="iPreco" size="10" maxlength="10" readonly>
+                </p>
+            </fieldset>
+
+            <input type="image" src="_imagens/botao-enviar.png" name="nEnviar" id="iEnviar">
+
+        </form>
         <footer id="rodape">
             <p>Copyright &copy; 2020 - by Henrique Amorim
                 <br> <a href="https://www.facebook.com/" target="_blank">Facebook</a> | <a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
