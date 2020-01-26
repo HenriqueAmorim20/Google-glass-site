@@ -36,7 +36,7 @@ a:hover {
 /* Essa parte altera toda a parte que está dentro de uma divisão previamente estabelecida(<div>), delimitando os limites e centralizando */
 
 div#interface {
-    width: 1750px;
+    width: 1600px;
     background-color: #ffffff;
     margin: -20px auto 0px auto;
     padding: 20px;
@@ -48,8 +48,8 @@ div#interface {
 
 header#cabecalho img#icone {
     position: absolute;
-    left: 1590px;
-    top: 70px;
+    left: 1470px;
+    top: 45px;
 }
 
 
@@ -97,8 +97,8 @@ figure.foto-legenda {
 }
 
 figure.foto-legenda img {
-    width: 850px;
-    height: 450px;
+    width: 750px;
+    height: 400px;
 }
 
 figure.foto-legenda figcaption {
@@ -147,7 +147,7 @@ nav#menu ul {
     /* Faz com que a lista não fique presa dentro do conteiner e sim possa ser utilizada em todo o site */
     position: absolute;
     top: -20px;
-    left: 1080px;
+    left: 980px;
 }
 
 
@@ -198,7 +198,7 @@ nav#menu a:hover {
 
 section#corpo {
     display: block;
-    width: 950px;
+    width: 850px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 20px;
@@ -298,7 +298,7 @@ table#tabelaspec caption span {
 
 aside#lateral {
     display: block;
-    width: 700px;
+    width: 650px;
     float: right;
     background-color: #dddddd;
     padding: 20px;
