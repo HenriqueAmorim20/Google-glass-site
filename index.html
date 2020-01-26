@@ -7,8 +7,6 @@
     <!-- Título da aba do navegador -->
     <title>Tudo sobre o google glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
-
-
     <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- Forma Global de formatar todos os elementos de apenas um arquivo, irá ser utilizado um arquivo CSS separado para fazer a formatação de todo o site -->
     <!-- <style>
@@ -27,10 +25,10 @@
         }
     </style> -->
     <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-
-
 </head>
+
+<!-- Todo código em JS deve ser escrito entre a tag script, e a maneira abaixo é utilizada para importar um arquivo especifico de JS onde estarão as funções que serão utilizadas -->
+<script src="_javascript/funcoes.js"></script>
 
 <body>
 
@@ -70,11 +68,11 @@
 
                 <!-- As listas não ordenadas não possuem start e podem ser do tipo disc, square e circle -->
                 <ul type="disc">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="specs.html">Especificações</a></li>
-                    <li><a href="fotos.html">Fotos</a></li>
-                    <li><a href="multimidia.html">Multimídia</a></li>
-                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
                 </ul>
             </nav>
 
