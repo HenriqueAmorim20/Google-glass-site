@@ -17,6 +17,10 @@ textarea:hover {
     background-color: #dddddd;
 }
 
+input#iEnviar {
+    margin-left: 370px;
+}
+
 legend {
     color: #888888;
     font-weight: bold;
